@@ -13,7 +13,7 @@
         <el-button type="primary" icon="el-icon-search" size="medium" @click="getList(searchForm.keyword)"></el-button>
       </common-form>
     </div>
-    <common-table :tableData="tableData" :tableLabel="tableLabel" :config="config" @changePage="getList" @edit="editUser" @del="delUser"></common-table>
+    <common-table :tableData="tableData" :tableLabel="tableLabel" :config="config" @changePage="getList()" @edit="editUser" @del="delUser"></common-table>
   </div>
 </template>
 
@@ -137,6 +137,7 @@ export default {
           this.config.total = res.data.count
           this.config.loading = false
         })
+      console.log(this.tableData)
     },
     addUser() {
       this.operateType = "add"
