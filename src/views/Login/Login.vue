@@ -1,5 +1,13 @@
 <template>
   <div style="padding: 20px">
+    <div class="mima" style="margin-bottom:10px">
+      <h2>用户名登录：</h2>
+      <span>用户名：wp,密码：123456</span>
+    </div>
+    <div class="mima">
+      <h3>管理员登录</h3>
+      <span>用户名：admin,密码：123456</span>
+    </div>
     <el-form :model="form" label-width="120">
       <el-form-item label="用户名">
         <el-input v-model="form.username"></el-input>
@@ -50,5 +58,8 @@ export default {
   padding: 45px;
   height: 450px;
   background-color: #fff;
+}
+.mima {
+  text-align: center;
 }
 </style>
